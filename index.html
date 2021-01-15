@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/path/to/tailwind.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+  </style>
+  <body
+    class="text-white"
+    style="text-align: center; font-family: 'Open Sans', sans-serif"
+  >
+    <header
+      class="flex flex-row justify-between bg-purple-800 text-bold font-bold py-4 px-8"
+    >
+      <h1 class="text-lg">Daniel Carlman</h1>
+      <nav class="block lg:hidden">
+        <!-- Burger Menu for Mobile -->
+        <svg style="fill: white" viewBox="0 0 100 80" width="30" height="30">
+          <rect width="100" height="15"></rect>
+          <rect y="30" width="100" height="15"></rect>
+          <rect y="60" width="100" height="15"></rect>
+        </svg>
+      </nav>
+      <nav class="hidden lg:block">Desktop Menu</nav>
+    </header>
+  </body>
+</html>
