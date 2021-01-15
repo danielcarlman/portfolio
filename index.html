@@ -12,23 +12,52 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
   </style>
+
+  <script>
+    function toggleMenu() {    
+      const x = document.getElementById("content");
+      if (x.style.display === "block") {
+      x.style.display = "none";
+      } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
+
   <body
-    class="text-white"
-    style="text-align: center; font-family: 'Open Sans', sans-serif"
+    class="text-white text-center"
+    style="font-family: 'Open Sans', sans-serif"
   >
     <header
-      class="flex flex-row justify-between bg-purple-800 text-bold font-bold py-4 px-8"
+      class="flex flex-row items-center justify-between lg:justify-evenly bg-purple-800 font-bold py-4 px-8"
     >
-      <h1 class="text-lg">Daniel Carlman</h1>
-      <nav class="block lg:hidden">
-        <!-- Burger Menu for Mobile -->
+      <h1 class="text-lg">danielcarlman.me</h1>
+      <nav class="block lg:hidden" onclick="toggleMenu()">
+        <!-- Burger Menu for Mobile & Ipad -->
         <svg style="fill: white" viewBox="0 0 100 80" width="30" height="30">
           <rect width="100" height="15"></rect>
           <rect y="30" width="100" height="15"></rect>
           <rect y="60" width="100" height="15"></rect>
         </svg>
       </nav>
-      <nav class="hidden lg:block">Desktop Menu</nav>
+      <nav class="inline hidden lg:block">
+        <!-- Menu for Desktop -->
+        <ul class="flex space-x-10"">
+          <li><a class="no-undeline" href="#">PROJECTS</a></li>
+          <li><a class="no-undeline" href="#">ARTICLES</a></li>
+          <li><a class="no-undeline" href="#">MEDIA</a></li>                 
+        </ul>
+      </nav>
     </header>
+    <div class="hidden flex text-white bg-purple-800 font-bold py-4 px-8 bg.black text-black lg:hidden" id="content">      
+      <nav>
+        <!-- Menu Content for Mobile -->
+        <ul class="space-y-4">
+          <li><a class="no-undeline" href="#">PROJECTS</a></li>
+          <li><a class="no-undeline" href="#">ARTICLES</a></li>
+          <li><a class="no-undeline" href="#">MEDIA</a></li>
+        </ul>
+      </nav>
+    </div>
   </body>
 </html>
