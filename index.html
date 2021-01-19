@@ -14,14 +14,14 @@
   </style>
 
   <script>
-    function toggleMenu() {    
-      const x = document.getElementById("content");
-      if (x.style.display === "block") {
-      x.style.display = "none";
+    function toggleMenu() {
+      const element = document.getElementById('content');
+      if (element.style.display === 'block') {
+        element.style.display = 'none';
       } else {
-      x.style.display = "block";
+        element.style.display = 'block';
+      }
     }
-  }
   </script>
 
   <body
@@ -29,10 +29,10 @@
     style="font-family: 'Open Sans', sans-serif"
   >
     <header
-      class="flex flex-row items-center justify-between lg:justify-evenly bg-purple-800 font-bold py-4 px-8"
+      class="flex flex-row items-center justify-between xl:justify-evenly bg-purple-900 font-bold py-4 px-8"
     >
       <h1 class="text-lg">danielcarlman.me</h1>
-      <nav class="block lg:hidden" onclick="toggleMenu()">
+      <nav class="block xl:hidden" onclick="toggleMenu()">
         <!-- Burger Menu for Mobile & Ipad -->
         <svg style="fill: white" viewBox="0 0 100 80" width="30" height="30">
           <rect width="100" height="15"></rect>
@@ -40,24 +40,116 @@
           <rect y="60" width="100" height="15"></rect>
         </svg>
       </nav>
-      <nav class="inline hidden lg:block">
+      <nav class="inline hidden xl:block">
         <!-- Menu for Desktop -->
-        <ul class="flex space-x-10"">
-          <li><a class="no-undeline" href="#">PROJECTS</a></li>
-          <li><a class="no-undeline" href="#">ARTICLES</a></li>
-          <li><a class="no-undeline" href="#">MEDIA</a></li>                 
+        <ul class="flex space-x-10">
+          <li><a class="no-underline" href="#">PROJECTS</a></li>
+          <li><a class="no-underline" href="#">ARTICLES</a></li>
+          <li><a class="no-underline" href="#">MEDIA</a></li>
         </ul>
       </nav>
     </header>
-    <div class="hidden flex text-white bg-purple-800 font-bold py-4 px-8 bg.black text-black lg:hidden" id="content">      
+
+    <!-- Menu Content for Mobile -->
+    <div
+      class="flex hidden absolute top-62 w-full text-white font-bold py-4 px-8 bg-purple-900 xl:hidden"
+      id="content"
+    >
       <nav>
-        <!-- Menu Content for Mobile -->
-        <ul class="space-y-4">
-          <li><a class="no-undeline" href="#">PROJECTS</a></li>
-          <li><a class="no-undeline" href="#">ARTICLES</a></li>
-          <li><a class="no-undeline" href="#">MEDIA</a></li>
+        <ul class="space-y-8">
+          <li><a class="no-underline" href="#">PROJECTS</a></li>
+          <li><a class="no-underline" href="#">ARTICLES</a></li>
+          <li><a class="no-underline" href="#">MEDIA</a></li>
         </ul>
       </nav>
+    </div>
+
+    <!-- Presentation -->
+    <div
+      class="flex flex-col justify-center bg-purple-800 py-20 px-10 space-y-4"
+      style="
+        background-image: url(bg.png);
+        background-size: cover;
+        height: 60vh;
+      "
+    >
+      <h1 class="font-bold text-xl lg:text-4xl">FRONT-END DEVELOPER</h1>
+      <p>
+        My name is Daniel Carlman and I'm a Front-End Developer from Chicago,
+        IL.
+      </p>
+    </div>
+    <!-- Projects -->
+    <div
+      class="flex flex-col justify-center items-center text-center text-black py-16 px-10 space-y-20"
+    >
+      <h2 class="font-bold text-xl lg:text-4xl">PROJECTS</h2>
+      <!-- Project 1 -->
+      <div class="lg:flex flex-row items-center lg:space-x-20">
+        <div class="mb-6">
+          <img class="w-max m-auto" src="jobs4juniors.png" />
+        </div>
+        <div>
+          <div class="flex flex-row justify-center item-center space-x-2 mb-2">
+            <h3 class="font-bold text-xl">Jobs 4 Juniors</h3>
+            <span
+              class="font-bold text-xs text-white bg-indigo-600 px-1.5 py-0.5 m-auto rounded"
+              >2020</span
+            >
+          </div>
+          <div class="mb-6">
+            <span
+              class="font-bold text-xs text-white bg-green-800 px-1.5 py-0.5 rounded"
+              >React</span
+            >
+            <span
+              class="font-bold text-xs text-white bg-green-800 px-1.5 py-0.5 rounded"
+              >Chakra-UI</span
+            >
+          </div>
+          <div class="mb-6">
+            <span>Link</span>
+            <span>Github</span>
+          </div>
+          <p class="text-base max-w-xl">
+            Jobs 4 Juniors filters out Senior and Lead jobs from
+            WeWorkRemotely's website.
+          </p>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="lg:flex flex-row items-center lg:space-x-20">
+        <div class="mb-6">
+          <img class="w-max m-auto" src="reactskillcalculator.png" />
+        </div>
+        <div>
+          <div class="flex flex-row justify-center item-center space-x-2 mb-2">
+            <h3 class="font-bold text-xl">Jobs 4 Juniors</h3>
+            <span
+              class="font-bold text-xs text-white bg-indigo-600 px-1.5 py-0.5 m-auto rounded"
+              >2020</span
+            >
+          </div>
+          <div class="mb-6">
+            <span
+              class="font-bold text-xs text-white bg-green-800 px-1.5 py-0.5 rounded"
+              >React</span
+            >
+            <span
+              class="font-bold text-xs text-white bg-green-800 px-1.5 py-0.5 rounded"
+              >Chakra-UI</span
+            >
+          </div>
+          <div class="mb-6">
+            <span>Link</span>
+            <span>Github</span>
+          </div>
+          <p class="text-base max-w-xl">
+            I created React Skill Calculator in May 2020 in order to help
+            beginners determine what they need to learn before they try React.
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
