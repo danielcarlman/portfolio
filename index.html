@@ -31,7 +31,14 @@
     <header
       class="flex flex-row items-center justify-between xl:justify-evenly bg-purple-900 font-bold py-4 px-8"
     >
-      <h1 class="text-lg">danielcarlman.me</h1>
+      <h1 class="text-lg">
+        <a
+          class="no-underline hover:text-yellow-400"
+          href="#""          
+          onclick="window.location.reload()"
+          >danielcarlman.me</a
+        >
+      </h1>
       <nav class="block xl:hidden" onclick="toggleMenu()">
         <!-- Burger Menu for Mobile & Ipad -->
         <svg style="fill: white" viewBox="0 0 100 80" width="30" height="30">
@@ -43,9 +50,28 @@
       <nav class="inline hidden xl:block">
         <!-- Menu for Desktop -->
         <ul class="flex space-x-10">
-          <li><a class="no-underline" href="#">PROJECTS</a></li>
-          <li><a class="no-underline" href="#">ARTICLES</a></li>
-          <li><a class="no-underline" href="#">MEDIA</a></li>
+          <li>
+            <a class="no-underline hover:text-yellow-400" href="#projects"
+              >PROJECTS</a
+            >
+          </li>
+          <li>
+            <a class="no-underline hover:text-yellow-400" href="#articles"
+              >ARTICLES</a
+            >
+          </li>
+          <li>
+            <a class="no-underline hover:text-yellow-400" href="#about"
+              >ABOUT</a
+            >
+          </li>
+          <li>
+            <a
+              class="no-underline hover:text-yellow-400"
+              href="/files/resume.pdf"
+              >RESUME</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -57,9 +83,12 @@
     >
       <nav>
         <ul class="space-y-8">
-          <li><a class="no-underline" href="#">PROJECTS</a></li>
-          <li><a class="no-underline" href="#">ARTICLES</a></li>
-          <li><a class="no-underline" href="#">MEDIA</a></li>
+          <li>
+            <a class="no-underline" href="#projects">PROJECTS</a>
+          </li>
+          <li><a class="no-underline" href="#articles">ARTICLES</a></li>
+          <li><a class="no-underline" href="#about">ABOUT</a></li>
+          <li><a class="no-underline" href="/files/resume.pdf">RESUME</a></li>
         </ul>
       </nav>
     </div>
@@ -68,7 +97,7 @@
     <div
       class="flex flex-col justify-center bg-purple-800 py-20 px-10 space-y-4"
       style="
-        background-image: url(bg.png);
+        background-image: url(/img/bg.png);
         background-size: cover;
         height: 60vh;
       "
@@ -81,13 +110,13 @@
     </div>
     <!-- Projects -->
     <div
-      class="flex flex-col justify-center items-center text-center text-black py-16 px-10 space-y-20"
+      class="flex flex-col justify-center items-center text-center text-black py-16 px-10 space-y-16"
     >
-      <h2 class="font-bold text-xl lg:text-4xl">PROJECTS</h2>
+      <h2 class="font-bold text-xl lg:text-4xl"><a id="projects" />PROJECTS</h2>
       <!-- Project 1 -->
       <div class="lg:flex flex-row items-center lg:space-x-20">
         <div class="mb-6">
-          <img class="w-max m-auto" src="jobs4juniors.png" />
+          <img class="w-max m-auto" src="/img/jobs4juniors.png" />
         </div>
         <div>
           <div class="flex flex-row justify-center item-center space-x-2 mb-2">
@@ -107,9 +136,28 @@
               >Chakra-UI</span
             >
           </div>
-          <div class="mb-6">
-            <span>Link</span>
-            <span>Github</span>
+          <div class="flex justify-center item-center mb-6 space-x-4">
+            <span
+              ><a href="https://jobs4juniors.netlify.app" target="_blank">
+                <img
+                  class="hover:opacity-50"
+                  src="/icons/link.svg"
+                  alt="Page Link"
+                />
+              </a>
+            </span>
+            <span
+              ><a
+                href="https://github.com/danielcarlman/jobs4juniors"
+                target="_blank"
+              >
+                <img
+                  class="hover:opacity-70"
+                  src="/icons/github.svg"
+                  alt="Github"
+                />
+              </a>
+            </span>
           </div>
           <p class="text-base max-w-xl">
             Jobs 4 Juniors filters out Senior and Lead jobs from
@@ -120,7 +168,7 @@
       <!-- Project 2 -->
       <div class="lg:flex flex-row items-center lg:space-x-20">
         <div class="mb-6">
-          <img class="w-max m-auto" src="reactskillcalculator.png" />
+          <img class="w-max m-auto" src="/img/reactskillcalculator.png" />
         </div>
         <div>
           <div class="flex flex-row justify-center item-center space-x-2 mb-2">
@@ -140,9 +188,31 @@
               >styled-components</span
             >
           </div>
-          <div class="mb-6">
-            <span>Link</span>
-            <span>Github</span>
+          <div class="flex justify-center item-center mb-6 space-x-4">
+            <span
+              ><a
+                href="https://reactskillcalculator.netlify.app"
+                target="_blank"
+              >
+                <img
+                  class="hover:opacity-50"
+                  src="icons/link.svg"
+                  alt="Page Link"
+                />
+              </a>
+            </span>
+            <span
+              ><a
+                href="https://github.com/danielcarlman/skillcalculator"
+                target="_blank"
+              >
+                <img
+                  class="hover:opacity-70"
+                  src="/icons/github.svg"
+                  alt="Github"
+                />
+              </a>
+            </span>
           </div>
           <p class="text-base max-w-xl">
             I created React Skill Calculator in May 2020 in order to help
