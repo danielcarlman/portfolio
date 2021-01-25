@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="top">
 
 <head>
   <meta charset="UTF-8" />
@@ -20,12 +20,17 @@
       element.style.display = 'block';
     }
   }
+
+  function closeOnClick() {
+    document.getElementById('content').style.display = 'none'
+  }
 </script>
 
 <body class="text-white text-center" style="font-family: 'Open Sans', sans-serif">
-  <header class="flex flex-row items-center justify-between xl:justify-evenly bg-purple-900 font-bold py-4 px-8">
+  <header
+    class="fixed w-screen flex flex-row items-center justify-between xl:justify-evenly bg-purple-900 font-bold py-4 px-8">
     <h1 class="text-lg">
-      <a class="no-underline hover:text-yellow-400" href="/">danielcarlman.me</a>
+      <a class="no-underline hover:text-yellow-400" href="#top">danielcarlman.me</a>
     </h1>
     <nav class="block xl:hidden" onclick="toggleMenu()">
       <!-- Burger Menu for Mobile & Ipad -->
@@ -52,22 +57,24 @@
         </li>
       </ul>
     </nav>
+    <div
+      class="hidden flex absolute top-14 left-0 w-screen justify-center top-62 w-full text-white font-bold py-4 px-8 bg-purple-900 xl:hidden"
+      id="content">
+      <nav>
+        <ul class="space-y-8">
+          <li>
+            <a class="no-underline" href="#projects" onclick="closeOnClick()">PROJECTS</a>
+          </li>
+          <li><a class="no-underline" href="#articles" onclick="closeOnClick()">ARTICLES</a></li>
+          <li><a class=" no-underline" href="#about" onclick="closeOnClick()">ABOUT</a></li>
+          <li><a class=" no-underline" href="/files/resume.pdf" onclick="closeOnClick()">RESUME</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Menu Content for Mobile -->
-  <div class="hidden flex absolute justify-center top-62 w-full text-white font-bold py-4 px-8 bg-purple-900 xl:hidden"
-    id="content">
-    <nav>
-      <ul class="space-y-8">
-        <li>
-          <a class="no-underline" href="#projects">PROJECTS</a>
-        </li>
-        <li><a class="no-underline" href="#articles">ARTICLES</a></li>
-        <li><a class="no-underline" href="#about">ABOUT</a></li>
-        <li><a class="no-underline" href="/files/resume.pdf">RESUME</a></li>
-      </ul>
-    </nav>
-  </div>
+
 
   <!-- Presentation -->
   <div class="flex flex-col justify-center bg-purple-800 py-20 px-10 space-y-4" style="
@@ -86,16 +93,18 @@
     <h2 class="font-bold text-xl lg:text-4xl">
       <a id="projects"></a>PROJECTS
     </h2>
-    <!-- Project 1 -->
+    <!-- Project 2 -->
     <div class="lg:flex flex-row items-center lg:space-x-20">
       <div class="mb-6">
         <a href="https://jobs4juniors.netlify.app" target="_blank">
-          <img src="/img/jobs4juniors.png" />
+          <img class="border-solid border-2 border-gray-700" src="/img/jobs4juniors.png" />
         </a>
       </div>
       <div>
         <div class="block space-x-2 mb-2">
-          <h3 class="font-bold text-xl">Jobs 4 Juniors</h3>
+          <a class="hover:text-gray-700" href="https://jobs4juniors.netlify.app" target="_blank">
+            <h3 class="font-bold text-xl">Jobs 4 Juniors</h3>
+          </a>
         </div>
         <div class="mb-6">
           <span class="font-bold text-xs text-white bg-green-800 px-1.5 py-0.5 rounded">React</span>
@@ -117,16 +126,18 @@
         </p>
       </div>
     </div>
-    <!-- Project 2 -->
+    <!-- Project 1 -->
     <div class="lg:flex flex-row items-center lg:space-x-20">
       <div class="mb-6">
         <a href="https://reactskillcalculator.netlify.app" target="_blank">
-          <img src="/img/reactskillcalculator.png" />
+          <img class="border-solid border-2 border-gray-700" src="/img/reactskillcalculator.png" />
         </a>
       </div>
       <div>
         <div class="block space-x-2 mb-2">
-          <h3 class="font-bold text-xl">React Skill Calculator</h3>
+          <a class="hover:text-gray-700" href="https://reactskillcalculator.netlify.app" target="_blank">
+            <h3 class="font-bold text-xl hover:opacity-70">React Skill Calculator</h3>
+          </a>
         </div>
         <div class="mb-6">
           <span class="font-bold text-xs text-white bg-green-800 px-1.5 py-0.5 rounded">React</span>
@@ -148,7 +159,65 @@
         </p>
       </div>
     </div>
-  </div>
+    <!-- Articles -->
+    <div class="flex flex-col justify-center items-center text-center text-black py-16 space-y-16">
+      <h2 class="font-bold text-xl lg:text-4xl">
+        <a id="articles"></a>ARTICLES
+      </h2>
+      <!-- Article 2 -->
+      <div class="lg:flex flex-row items-center lg:space-x-20">
+        <div class="mb-6">
+          <a href="https://mentorcruise.com/blog/my-mentor-helps-me-think-senior-developer/" target="_blank">
+            <img class="border-solid border-2 border-border-gray-700" src="/img/mentorcruise.png" />
+          </a>
+        </div>
+        <div>
+          <div class="block space-x-2 mb-2">
+            <a class="hover:text-gray-700"
+              href="https://mentorcruise.com/blog/my-mentor-helps-me-think-senior-developer/" target="_blank">
+              <h3 class="font-bold text-xl mb-6">MentorCruise Interview</h3>
+            </a>
+          </div>
+          <div class="flex justify-center item-center mb-6 space-x-4">
+            <span><a href="https://mentorcruise.com/blog/my-mentor-helps-me-think-senior-developer/" target="_blank">
+                <img class="hover:opacity-50" src="/icons/link.svg" alt="Page Link" />
+              </a>
+            </span>
+          </div>
+          <p class="text-base max-w-xl">
+            I was interviewed and featured on MentorCruise's blog. Here I talk a bit about my career and how my mentor
+            helped me improve as a developer. The interview was conducted by CEO Dominic Monn.
+          </p>
+        </div>
+      </div>
+      <!-- Article 1 -->
+      <div class="lg:flex flex-row items-center lg:space-x-20">
+        <div class="mb-6">
+          <a href="https://reactskillcalculator.netlify.app" target="_blank">
+            <img class="border-solid border-2 border-gray-700" src="/img/devto.png" />
+          </a>
+        </div>
+        <div>
+          <div class="block space-x-2 mb-2">
+            <a class="hover:text-gray-700" href="https://reactskillcalculator.netlify.app" target="_blank">
+              <h3 class="font-bold text-base mb-6">"Improving React Accessibility with Dynamic Aria Label Props"
+            </a>
+            </h3>
+          </div>
+          <div class="flex justify-center item-center mb-6 space-x-4">
+            <span><a href="https://dev.to/danielcarlman/improving-react-accessibility-with-dynamic-aria-label-props-jl7"
+                target="_blank">
+                <img class="hover:opacity-50" src="icons/link.svg" alt="Page Link" />
+              </a>
+            </span>
+          </div>
+          <p class="text-base max-w-xl">
+            I wrote this article for Dev.to showing how React props can be used to dynamically change aria-labels and
+            improve accessibility experience.
+          </p>
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>
