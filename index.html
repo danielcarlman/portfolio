@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="top" style="scroll-behavior: smooth">
+<html class="box-border" id="top" style="scroll-behavior: smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -26,14 +26,14 @@
   }
 </script>
 
-<body class="text-white text-center" style="font-family: 'Open Sans', sans-serif">
+<body class="text-white text-center w-full" style="font-family: 'Open Sans', sans-serif">
   <header
-    class="fixed w-screen flex flex-row items-center justify-between xl:justify-evenly bg-purple-900 font-bold py-4 px-8">
+    class="fixed w-full flex flex-row items-center justify-between bg-purple-900 font-bold py-4 px-8 xl:justify-evenly xl:space-x-80">
     <h1 class="text-lg">
       <a class="no-underline hover:text-yellow-400" href="#top">danielcarlman.me</a>
     </h1>
     <nav class="block xl:hidden" onclick="toggleMenu()">
-      <!-- Burger Menu for Mobile & Ipad -->
+      <!-- Burger Menu for Mobile & iPad -->
       <svg style="fill: white" viewBox="0 0 100 80" width="30" height="30">
         <rect width="100" height="15"></rect>
         <rect y="30" width="100" height="15"></rect>
@@ -57,8 +57,9 @@
         </li>
       </ul>
     </nav>
+    <!-- Menu Modal for Mobile -->
     <div
-      class="hidden flex absolute top-14 left-0 w-screen justify-center top-62 w-full text-white font-bold py-4 px-8 bg-purple-900 xl:hidden"
+      class="hidden flex absolute top-14 left-0 w-full justify-center top-62 w-full text-white font-bold py-4 px-8 bg-purple-900 xl:hidden"
       id="content">
       <nav>
         <ul class="space-y-8">
@@ -73,11 +74,8 @@
     </div>
   </header>
 
-  <!-- Menu Content for Mobile -->
-
-
   <!-- Presentation -->
-  <div class="flex flex-col justify-center bg-purple-800 py-20 px-10 space-y-4" style="
+  <section class="flex flex-col justify-center bg-purple-800 py-20 px-10 space-y-4" style="
         background-image: url(/img/bg.png);
         background-size: cover;
         height: 500px;
@@ -87,17 +85,19 @@
       My name is Daniel Carlman and I'm a Front-End Developer from Chicago,
       IL.
     </p>
-  </div>
+  </section>
   <!-- Projects -->
-  <div class="flex flex-col justify-center items-center text-center text-black py-16 px-10 space-y-16">
-    <h2 class="font-bold text-xl lg:text-4xl">
-      <a id="projects"></a>PROJECTS
-    </h2>
+  <main class="flex flex-col justify-center items-center text-center text-black pt-16 px-10 space-y-16 xl:">
+    <a id="projects">
+      <h2 class="font-bold text-xl lg:text-4xl">
+        PROJECTS
+      </h2>
+    </a>
     <!-- Project 2 -->
-    <div class="lg:flex flex-row items-center lg:space-x-20">
+    <article class="lg:flex flex-row items-center lg:space-x-20">
       <div class="mb-6">
         <a href="https://jobs4juniors.netlify.app" target="_blank">
-          <img class="border-solid border-2 border-gray-700" src="/img/jobs4juniors.png" />
+          <img class="border-solid border-2 border-gray-700 m-auto" src="/img/jobs4juniors.png" />
         </a>
       </div>
       <div>
@@ -125,12 +125,12 @@
           intermediate developers. Project created in October 2020.
         </p>
       </div>
-    </div>
+    </article>
     <!-- Project 1 -->
-    <div class="lg:flex flex-row items-center lg:space-x-20">
+    <article class="lg:flex flex-row items-center lg:space-x-20">
       <div class="mb-6">
         <a href="https://reactskillcalculator.netlify.app" target="_blank">
-          <img class="border-solid border-2 border-gray-700" src="/img/reactskillcalculator.png" />
+          <img class="border-solid border-2 border-gray-700 m-auto" src="/img/reactskillcalculator.png" />
         </a>
       </div>
       <div>
@@ -158,17 +158,19 @@
           beginners determine what they need to learn before they try React.
         </p>
       </div>
-    </div>
+    </article>
     <!-- Articles -->
-    <div class="flex flex-col justify-center items-center text-center text-black py-16 space-y-16">
-      <h2 class="font-bold text-xl lg:text-4xl">
-        <a id="articles"></a>ARTICLES
-      </h2>
+    <section class="flex flex-col justify-center items-center text-center text-black py-16 space-y-16">
+      <a id="articles">
+        <h2 class="font-bold text-xl lg:text-4xl">
+          ARTICLES
+        </h2>
+      </a>
       <!-- Article 2 -->
-      <div class="lg:flex flex-row items-center lg:space-x-20">
+      <article class="lg:flex flex-row items-center lg:space-x-20">
         <div class="mb-6">
           <a href="https://mentorcruise.com/blog/my-mentor-helps-me-think-senior-developer/" target="_blank">
-            <img class="border-solid border-2 border-border-gray-700" src="/img/mentorcruise.png" />
+            <img class="border-solid border-2 border-border-gray-700 m-auto" src="/img/mentorcruise.png" />
           </a>
         </div>
         <div>
@@ -189,12 +191,12 @@
             helped me improve as a developer. The interview was conducted by CEO Dominic Monn.
           </p>
         </div>
-      </div>
+      </article>
       <!-- Article 1 -->
-      <div class="lg:flex flex-row items-center lg:space-x-20">
+      <article class="lg:flex flex-row items-center lg:space-x-20">
         <div class="mb-6">
           <a href="https://reactskillcalculator.netlify.app" target="_blank">
-            <img class="border-solid border-2 border-gray-700" src="/img/devto.png" />
+            <img class="border-solid border-2 border-gray-700 m-auto" src="/img/devto.png" />
           </a>
         </div>
         <div>
@@ -205,7 +207,8 @@
             </h3>
           </div>
           <div class="flex justify-center item-center mb-6 space-x-4">
-            <span><a href="https://dev.to/danielcarlman/improving-react-accessibility-with-dynamic-aria-label-props-jl7"
+            <span>
+              <a href="https://dev.to/danielcarlman/improving-react-accessibility-with-dynamic-aria-label-props-jl7"
                 target="_blank">
                 <img class="hover:opacity-50" src="icons/link.svg" alt="Page Link" />
               </a>
@@ -216,8 +219,44 @@
             improve accessibility experience.
           </p>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
+  </main>
+  <!-- About -->
+  <footer>
+    <section
+      class="flex flex-col justify-center items-center text-center py-16 px-10 space-y-16 bg-purple-900 text-white">
+      <a id="about">
+        <h2 class="font-bold text-xl lg:text-4xl">
+          ABOUT
+        </h2>
+      </a>
+      <!-- About Profile -->
+      <article class="lg:flex flex-row justify-center item-center space-y-16 lg:space-x-16 xl:space-y-0">
+        <div class="space-y-16">
+          <a href="https://mentorcruise.com/blog/my-mentor-helps-me-think-senior-developer/" target="_blank">
+            <img class="border-solid border-gray-700 rounded-full m-auto" src="/img/about.png" />
+          </a>
+        </div>
+        <div class="flex flex-col justify-center item-center space-y-12">
+          <div>
+            <h3 class="font-bold text-xl">Daniel Carlman</h3>
+          </div>
+          <div>
+            <p class="text-base max-w-xl">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+              into
+              electronic typesetting, remaining
+              essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+              versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </footer>
 </body>
 
 </html>
